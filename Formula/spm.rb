@@ -5,21 +5,21 @@
 class Spm < Formula
   desc "Skills Package Manager for AI agents"
   homepage "https://skillpkg.dev"
-  version "1.1.0"
+  version "1.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skillpkg/spm/releases/download/v1.1.0/spm_1.1.0_darwin_amd64.tar.gz"
-      sha256 "5673cf7e3e2270b43e0251a07f91a2487a531dac71bcb3052fb4c027f42a447c"
+      url "https://github.com/skillpkg/spm/releases/download/v1.1.1/spm_1.1.1_darwin_amd64.tar.gz"
+      sha256 "d1e130564cad529459f127738f816addad4db904a1a28d0ee0e5d799d9a0bc87"
 
       define_method(:install) do
         bin.install "spm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skillpkg/spm/releases/download/v1.1.0/spm_1.1.0_darwin_arm64.tar.gz"
-      sha256 "b704cda191351ebe95da6eeb42da35adcf8606d3a35d3336ccd5aa2f8a29561e"
+      url "https://github.com/skillpkg/spm/releases/download/v1.1.1/spm_1.1.1_darwin_arm64.tar.gz"
+      sha256 "ab14b975854ed1b25f347c6c6219a16c9e40f9cf6705c03ac221c46458b6bf07"
 
       define_method(:install) do
         bin.install "spm"
@@ -29,15 +29,15 @@ class Spm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skillpkg/spm/releases/download/v1.1.0/spm_1.1.0_linux_amd64.tar.gz"
-      sha256 "af3b50a69f1c4a2c38c6f3205493e4946241893a735460e83d692a4dac5e338a"
+      url "https://github.com/skillpkg/spm/releases/download/v1.1.1/spm_1.1.1_linux_amd64.tar.gz"
+      sha256 "b2d4d6a20942f56eb2ce7aaf28c022d7bae453e076e6f5c0fda6621e655c3dd5"
       define_method(:install) do
         bin.install "spm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skillpkg/spm/releases/download/v1.1.0/spm_1.1.0_linux_arm64.tar.gz"
-      sha256 "df9275eaba18c6bfa944daa8b77f53e684e170507df8cc5fbb9735b94623a45d"
+      url "https://github.com/skillpkg/spm/releases/download/v1.1.1/spm_1.1.1_linux_arm64.tar.gz"
+      sha256 "52e200ad5fbe57addeb01da7e3879e2c1f34f3d2b36e8bc9a5e64ccf12b011d7"
       define_method(:install) do
         bin.install "spm"
       end
